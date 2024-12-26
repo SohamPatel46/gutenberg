@@ -22,7 +22,7 @@ const meta = {
 	},
 	argTypes: {
 		tagName: {
-			control: { type: null },
+			control: { type: 'text' },
 			description: 'The tag name of the editable element.',
 			table: {
 				type: {
@@ -38,8 +38,30 @@ const meta = {
 			},
 			description: 'Function executed when the text value changes.',
 		},
+		onReplace: {
+			control: { type: null },
+			table: {
+				type: { summary: 'function' },
+			},
+			description:
+				'Function executed when the `Text` instance can be replaced with the given blocks.',
+		},
+		onMerge: {
+			control: { type: null },
+			table: {
+				type: { summary: 'function' },
+			},
+			description: 'Function executed when blocks can be merged.',
+		},
+		onRemove: {
+			control: { type: null },
+			table: {
+				type: { summary: 'function' },
+			},
+			description: 'Function executed when the block can be removed.',
+		},
 		value: {
-			control: { type: 'string' },
+			control: { type: 'text' },
 			description: 'String to make editable.',
 			table: {
 				type: {
@@ -48,7 +70,7 @@ const meta = {
 			},
 		},
 		placeholder: {
-			control: { type: 'string' },
+			control: { type: 'text' },
 			description: 'Placeholder text to show when the field is empty.',
 			table: {
 				type: {
@@ -83,10 +105,10 @@ export const Default = {
 					onChange( ...changeArgs );
 					setValue( ...changeArgs );
 				} }
-				tagName="div"
-				disableLineBreaks="true"
-				placeholder="Placeholder text"
 			/>
 		);
+	},
+	args: {
+		tagName: 'h2',
 	},
 };
