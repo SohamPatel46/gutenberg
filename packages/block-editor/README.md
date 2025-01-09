@@ -347,9 +347,15 @@ _Related_
 
 > **Deprecated**
 
+'The CopyHandler component catches copy/cut and paste events coming from its props.children.
+
 _Parameters_
 
--   _props_ `Object`:
+-   _props_ `Object`: The props for the component.
+
+_Returns_
+
+-   `Element`: The block type item element.
 
 ### createCustomColorsHOC
 

@@ -21,8 +21,12 @@ export const __unstableUseClipboardHandler = () => {
 };
 
 /**
+ * 'The CopyHandler component catches copy/cut and paste events coming from its props.children.
+ *
  * @deprecated
- * @param {Object} props
+ *
+ * @param {Object} props The props for the component.
+ * @return {Element} The block type item element.
  */
 export default function CopyHandler( props ) {
 	deprecated( 'CopyHandler', {
